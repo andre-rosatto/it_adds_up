@@ -1,11 +1,16 @@
 .Board {
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   margin: auto;
   background-color: black;
   border: 1px solid white;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 30% 1fr;
   aspect-ratio: 1;
+  color: white;
+}
+
+.values {
+  display: grid;
 }

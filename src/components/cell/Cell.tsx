@@ -2,15 +2,27 @@ import styles from './Cell.module.css';
 
 export interface CellProps {
 	value: number;
-	checked: boolean;
+	mark: number;
 	onClick: () => void;
 }
 
-export default function Cell({ value, checked, onClick }: CellProps) {
+export default function Cell({ value, mark, onClick }: CellProps) {
+	const getClassName = () => {
+		switch (mark) {
+			case 1:
+				return styles.checked;
+			case 2:
+				return styles.deleted;
+			default:
+				return '';
+		}
+	}
+
 	return (
 		<div className={styles.Cell} onClick={onClick}>
-			<span className={styles.value}>{value}</span>
-			{checked && <span className={styles.checked}></span>}
+			<span className={`${styles.value} ${getClassName()}`}>{value}</span>
+			{/* {mark === 1 && <span className={`${styles.mark} ${styles.checked}`}></span>}
+			{mark === 2 && <span className={`${styles.mark} ${styles.deleted}`}></span>} */}
 		</div>
 	);
 }

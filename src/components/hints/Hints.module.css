@@ -1,0 +1,31 @@
+.Hints {
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  border: 1px solid gray;
+}
+
+.columns {
+  flex-direction: column;
+}
+
+.currentValue {
+  font-size: 1rem;
+  transition: color 0.5s;
+}
+
+.correct {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.wrong {
+  color: red;
+  font-weight: bold;
+}
