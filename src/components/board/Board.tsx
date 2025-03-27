@@ -1,6 +1,6 @@
 import styles from './Board.module.css';
 import useGame from '../hooks/useGame';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cell from '../cell';
 import Hints from '../hints';
 
@@ -8,18 +8,39 @@ const BOARD_SIZE = 5;
 
 export default function Board() {
 	const { values, cols, rows } = useGame(BOARD_SIZE);
-	const [marks, setMarks] = useState(new Array(BOARD_SIZE * BOARD_SIZE).fill(0));
+	const [marks, setMarks] = useState<number[]>(new Array(BOARD_SIZE * BOARD_SIZE).fill(0));
+	const [win, setWin] = useState(false);
+
+	useEffect(() => {
+		const checkWin = () => {
+			const markCount = marks.filter(mark => mark === 1).length;
+			if (markCount !== Math.floor(BOARD_SIZE * BOARD_SIZE / 2)) {
+				return;
+			}
+			const colValues = getCurrentValues('columns');
+			const rowValues = getCurrentValues('rows');
+			for (let i = 0; i < BOARD_SIZE; i++) {
+				if (colValues[i] !== cols[i] || rowValues[i] !== rows[i]) {
+					return false;
+				}
+			}
+			setWin(true);
+			console.log('win!');
+		}
+		checkWin();
+	}, [marks]);
 
 	const handleCellClick = (idx: number) => {
-		const nextChecks = [...marks];
-		nextChecks[idx] += 1;
-		if (nextChecks[idx] > 2) {
-			nextChecks[idx] = 0;
+		if (win) return;
+		const nextMarks = [...marks];
+		nextMarks[idx] += 1;
+		if (nextMarks[idx] > 2) {
+			nextMarks[idx] = 0;
 		}
-		setMarks(nextChecks);
+		setMarks(nextMarks);
 	}
 
-	const getColsCurrentValues = (orientation: 'columns' | 'rows') => {
+	const getCurrentValues = (orientation: 'columns' | 'rows') => {
 		const result = new Array(BOARD_SIZE).fill(0);
 		for (let i = 0; i < BOARD_SIZE * BOARD_SIZE; i++) {
 			const idx = orientation === 'columns' ? i % BOARD_SIZE : Math.floor(i / BOARD_SIZE);
@@ -34,8 +55,8 @@ export default function Board() {
 		<div className={styles.Board}>
 			<span></span>
 
-			<Hints orientation='columns' values={cols} currentValues={getColsCurrentValues('columns')} />
-			<Hints orientation='rows' values={rows} currentValues={getColsCurrentValues('rows')} />
+			<Hints orientation='columns' values={cols} currentValues={getCurrentValues('columns')} />
+			<Hints orientation='rows' values={rows} currentValues={getCurrentValues('rows')} />
 
 			<div
 				className={styles.values}

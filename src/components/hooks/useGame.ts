@@ -23,7 +23,7 @@ export default function useGame(size: number) {
 			nextValues[randomIdx] = value;
 
 			solutionCount++;
-			if (solutionCount <= size * 2) {
+			if (solutionCount <= Math.floor(size * size / 2)) {
 				const row = Math.floor(randomIdx / size);
 				const col = randomIdx % size;
 				nextRows[row] += value;
