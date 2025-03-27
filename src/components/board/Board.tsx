@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Cell from '../cell';
 import Hints from '../hints';
 
-const BOARD_SIZE = 5;
+const BOARD_SIZE = 6;
 
 export default function Board() {
 	const { values, cols, rows } = useGame(BOARD_SIZE);

@@ -18,7 +18,7 @@ export default function useGame(size: number) {
 					emptyIndices.push(idx);
 				}
 			}
-			const value = Math.floor(Math.random() * 10);
+			const value = Math.floor(Math.random() * 9) + 1;
 			const randomIdx = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
 			nextValues[randomIdx] = value;
 
