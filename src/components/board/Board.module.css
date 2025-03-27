@@ -1,0 +1,11 @@
+.Board {
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+  background-color: black;
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  aspect-ratio: 1;
+}
