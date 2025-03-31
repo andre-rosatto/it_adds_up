@@ -1,5 +1,10 @@
 {
   "restart_confirm": "Iniciar um novo jogo?",
   "menu_new_game": "Novo jogo",
-  "menu_help": "Ajuda"
+  "menu_help": "Ajuda",
+  "help_title": "Como Jogar",
+  "help_text_1": "O objetivo do jogo é marcar os números de forma que a soma corresponda aos números indicados nas colunas e linhas.",
+  "help_text_2": "Clique uma vez para marcar os números; clique outra vez para marcar os números que não fazem parte da solução; e clique uma terceira vez para desmarcar.",
+  "help_text_3": "Cada coluna e linha exibe a soma que devem conter, além da soma dos números marcados atualmente.",
+  "help_text_4": "Em cima à esquerda, é indicado quantos números estão marcados e quantos devem ser marcados. É necessário marcar a quantidade exata de números para vencer."
 }

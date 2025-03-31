@@ -1,0 +1,54 @@
+.Help {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  padding: 0.5rem;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+}
+
+.title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.text {
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--mark-checked);
+  color: white;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.5s;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  background-color: var(--bg-secondary);
+}
+
+.button:active {
+  background-color: var(--mark-checked);
+}

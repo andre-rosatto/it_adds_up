@@ -1,5 +1,10 @@
 {
   "restart_confirm": "Start a new game?",
   "menu_new_game": "New Game",
-  "menu_help": "Help"
+  "menu_help": "Help",
+  "help_title": "How to Play",
+  "help_text_1": "The goal is to mark the numbers so that their sum adds up to the numbers shown in the columns and rows.",
+  "help_text_2": "Tap once to mark the numbers; tap again to mark numbers as not part of the solution; and tap a third time to unmark them.",
+  "help_text_3": "Each column and row shows the required sum, besides the sum of the currently marked numbers.",
+  "help_text_4": "At the top left, it is shown how many numbers are marked and how many must be marked. You must mark the exact amount of numbers to win."
 }

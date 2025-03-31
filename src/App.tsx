@@ -6,6 +6,7 @@ import Menu from './components/menu';
 import './i18n';
 import { useTranslation } from 'react-i18next';
 import Confetti from './components/confetti';
+import Help from './components/help/Help';
 
 const BOARD_SIZE = 6;
 
@@ -13,6 +14,7 @@ export default function App() {
 	const { values, cols, rows, resetGame } = useGame(BOARD_SIZE);
 	const [marks, setMarks] = useState<number[]>(new Array(BOARD_SIZE * BOARD_SIZE).fill(0));
 	const [win, setWin] = useState(false);
+	const [showHelp, setShowHelp] = useState(false);
 	const { t } = useTranslation();
 
 	const handleMark = (idx: number) => {
@@ -40,11 +42,16 @@ export default function App() {
 	}
 
 	const handleHelp = () => {
-
+		setShowHelp(true);
 	}
 
 	return (
-		<div className='App'>
+		<div className="App">
+			<div className="title-bar">
+				<img src="favicon.png" alt="" />
+				<h1>It Adds Up!</h1>
+			</div>
+
 			<Board
 				enabled={!win}
 				size={BOARD_SIZE}
@@ -62,6 +69,12 @@ export default function App() {
 			/>
 
 			{win && <Confetti />}
+
+			{showHelp &&
+				<Help
+					onClose={() => setShowHelp(false)}
+				/>
+			}
 		</div>
 	);
 }

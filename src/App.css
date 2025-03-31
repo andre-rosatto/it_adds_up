@@ -1,4 +1,25 @@
 .App {
   background: var(--bg);
   min-height: 100vh;
+  font-family: var(--font-family);
+}
+
+.App .title-bar {
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  box-sizing: content-box;
+  gap: 1rem;
+}
+
+.App .title-bar img {
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+.App .title-bar h1 {
+  color: white;
+  text-align: center;
 }
