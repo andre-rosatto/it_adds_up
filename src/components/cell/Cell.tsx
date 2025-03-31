@@ -21,8 +21,6 @@ export default function Cell({ value, mark, onClick }: CellProps) {
 	return (
 		<div className={styles.Cell} onClick={onClick}>
 			<span className={`${styles.value} ${getClassName()}`}>{value}</span>
-			{/* {mark === 1 && <span className={`${styles.mark} ${styles.checked}`}></span>}
-			{mark === 2 && <span className={`${styles.mark} ${styles.deleted}`}></span>} */}
 		</div>
 	);
 }

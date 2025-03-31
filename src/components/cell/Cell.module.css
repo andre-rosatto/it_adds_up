@@ -3,9 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid gray;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0.1rem;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
 }
 
 .value {
