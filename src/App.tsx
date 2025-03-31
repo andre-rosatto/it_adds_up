@@ -5,6 +5,7 @@ import useGame from './components/hooks/useGame';
 import Menu from './components/menu';
 import './i18n';
 import { useTranslation } from 'react-i18next';
+import Confetti from './components/confetti';
 
 const BOARD_SIZE = 6;
 
@@ -35,6 +36,7 @@ export default function App() {
 		}
 		setMarks(new Array(BOARD_SIZE * BOARD_SIZE).fill(0));
 		resetGame();
+		setWin(false);
 	}
 
 	const handleHelp = () => {
@@ -58,6 +60,8 @@ export default function App() {
 				onNewGame={handleNewGame}
 				onHelp={handleHelp}
 			/>
+
+			{win && <Confetti />}
 		</div>
 	);
 }
