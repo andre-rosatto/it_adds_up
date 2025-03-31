@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
   padding: 0.1rem;
-  border-top: 1px solid gray;
-  border-left: 1px solid gray;
+  border-top: var(--grid);
+  border-left: var(--grid);
 }
 
 .value {
@@ -25,14 +25,14 @@
 }
 
 .checked {
-  border-color: green;
+  border-color: var(--mark-checked);
   border-radius: 100%;
   transition: color 0.25s, border-radius 0.5s ease-in-out 0.1s,
     border-color 0.25s;
 }
 
 .deleted {
-  border-color: red;
+  border-color: var(--mark-deleted);
   border-radius: 100%;
   transition: color 0.25s, border-radius 0.5s ease-in-out 0.1s,
     border-color 0.25s;

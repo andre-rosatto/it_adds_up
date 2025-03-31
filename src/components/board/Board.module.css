@@ -2,13 +2,15 @@
   width: 100%;
   max-width: 500px;
   margin: auto;
-  background-color: black;
+  background-color: var(--bg-primary);
   border: 1px solid white;
   display: grid;
   grid-template-columns: 20% 1fr;
   grid-template-rows: 20% 1fr;
   aspect-ratio: 1;
   color: white;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 .values {

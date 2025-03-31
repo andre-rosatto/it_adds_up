@@ -3,6 +3,7 @@ import useGame from '../hooks/useGame';
 import { useEffect, useState } from 'react';
 import Cell from '../cell';
 import Hints from '../hints';
+import Counter from '../counter';
 
 const BOARD_SIZE = 6;
 
@@ -53,7 +54,7 @@ export default function Board() {
 
 	return (
 		<div className={styles.Board}>
-			<span></span>
+			<Counter count={marks.filter(mark => mark === 1).length} size={BOARD_SIZE} />
 
 			<Hints orientation='columns' values={cols} currentValues={getCurrentValues('columns')} />
 			<Hints orientation='rows' values={rows} currentValues={getCurrentValues('rows')} />

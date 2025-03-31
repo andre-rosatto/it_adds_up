@@ -1,0 +1,36 @@
+.Counter {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5%;
+  font-size: 75%;
+  transition: color 0.5s;
+  text-align: center;
+}
+
+.checksContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.check {
+  font-size: 100%;
+  opacity: 0.5;
+  user-select: none;
+  transition: color 0.5s;
+}
+
+.correct {
+  font-weight: bold;
+  color: var(--mark-checked);
+  opacity: 1;
+}
+
+.wrong {
+  font-weight: bold;
+  color: var(--mark-deleted);
+}
+
+@media screen and (max-width: 355px) {
+  .check {
+    font-size: 75%;
+  }
+}

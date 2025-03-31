@@ -1,6 +1,16 @@
+:root {
+  --font-family: Arial, Helvetica, sans-serif;
+  --grid: 1px solid gray;
+  --bg-primary: black;
+  --bg-secondary: #333;
+  --mark-checked: lightgreen;
+  --mark-deleted: red;
+}
+
 html {
   background-color: #333;
 }
+
 * {
   margin: 0;
   padding: 0;
