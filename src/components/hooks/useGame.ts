@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function useGame(size: number) {
 	const [values, setValues] = useState<number[]>([]);
@@ -6,6 +6,10 @@ export default function useGame(size: number) {
 	const [cols, setCols] = useState<number[]>([]);
 
 	useEffect(() => {
+		resetGame();
+	}, [size]);
+
+	const resetGame = useCallback(() => {
 		const nextValues = new Array(size * size).fill(-1);
 		const nextRows = new Array(size).fill(0);
 		const nextCols = new Array(size).fill(0);
@@ -36,5 +40,5 @@ export default function useGame(size: number) {
 		setRows(nextRows);
 	}, [size]);
 
-	return { values, cols, rows };
+	return { values, cols, rows, resetGame };
 }

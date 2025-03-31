@@ -13,7 +13,7 @@
 
 .check {
   font-size: 100%;
-  opacity: 0.5;
+  opacity: 0.3;
   user-select: none;
   transition: color 0.5s;
 }

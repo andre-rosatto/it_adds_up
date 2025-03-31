@@ -1,0 +1,46 @@
+.Menu {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  font-family: var(--font-family);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.menuContent {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.menuContent:hover {
+  color: var(--mark-checked);
+}
+
+.flag {
+  padding: 0.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: border 0.5s;
+  cursor: pointer;
+}
+
+.flag.selected {
+  border-color: var(--mark-checked);
+  pointer-events: none;
+}
