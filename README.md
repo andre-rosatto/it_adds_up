@@ -1,54 +1,20 @@
-# React + TypeScript + Vite
+# It Adds Up
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<b>It Adds Up</b> is a logic game where your goal is to mark the numbers so that they match the values shown in the columns and rows.
 
-Currently, two official plugins are available:
+<b>It Adds Up</b> was written in Typescript/React, and it offers two localization options.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+<img height="50" src="https://github.com/user-attachments/assets/262eb873-1f66-40c3-9261-c05604451284" alt="TypeScript" title="TypeScript"/>
+<img height="50" src="https://github.com/user-attachments/assets/958af20f-198d-465a-b381-7578c6eb136f" alt="React" title="React"/>
+<img height="50" src="https://github.com/user-attachments/assets/6364c31a-da0f-4ee8-a69f-f33ad1f7c921" alt="HTML" title="HTML"/>
+<img height="50" src="https://github.com/user-attachments/assets/7c59f579-8108-4064-b758-5aa207f23e81" alt="CSS" title="CSS"/>
+<img height="50" src="https://github.com/user-attachments/assets/1f665f79-d1a3-464f-b4ac-3916b5d1a38b" alt="NPM" title="NPM"/>
 
-## Expanding the ESLint configuration
+## Installation
+```npm install```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Scripts
+```npm run dev```: Starts the game in development mode and serves it on ```localhost:5173```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+```npm build```: Builds the game for production
