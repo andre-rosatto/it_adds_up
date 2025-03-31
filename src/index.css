@@ -1,14 +1,11 @@
 :root {
   --font-family: Arial, Helvetica, sans-serif;
   --grid: 1px solid gray;
+  --bg: radial-gradient(#010, #030);
   --bg-primary: black;
   --bg-secondary: #333;
   --mark-checked: lightgreen;
   --mark-deleted: red;
-}
-
-html {
-  background-color: #333;
 }
 
 * {
@@ -16,4 +13,3 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-
