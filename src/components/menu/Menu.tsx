@@ -11,7 +11,7 @@ interface MenuProps {
 export default function Menu({ onNewGame, onHelp }: MenuProps) {
 	const { t, i18n } = useTranslation();
 
-	const currentLanguage = i18n.language;
+	const currentLanguage = i18n.language.split('-')[0];
 
 	const handleLanguageClick = (language: string) => {
 		i18n.changeLanguage(language);
