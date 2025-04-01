@@ -32,12 +32,22 @@ export default function App() {
 
 	const handleNewGame = () => {
 		if (!win) {
+			if (!window.confirm(t('new_game_confirm'))) {
+				return;
+			}
+		}
+		setMarks(marks => marks.map(() => 0));
+		resetGame();
+		setWin(false);
+	}
+
+	const handleRestartGame = () => {
+		if (!win) {
 			if (!window.confirm(t('restart_confirm'))) {
 				return;
 			}
 		}
-		setMarks(new Array(BOARD_SIZE * BOARD_SIZE).fill(0));
-		resetGame();
+		setMarks(marks => marks.map(() => 0));
 		setWin(false);
 	}
 
@@ -65,6 +75,7 @@ export default function App() {
 
 			<Menu
 				onNewGame={handleNewGame}
+				onRestartGame={handleRestartGame}
 				onHelp={handleHelp}
 			/>
 

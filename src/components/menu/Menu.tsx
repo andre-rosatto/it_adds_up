@@ -5,10 +5,11 @@ import flagEn from '../../assets/flag_en.webp';
 
 interface MenuProps {
 	onNewGame: () => void;
+	onRestartGame: () => void;
 	onHelp: () => void;
 }
 
-export default function Menu({ onNewGame, onHelp }: MenuProps) {
+export default function Menu({ onNewGame, onRestartGame, onHelp }: MenuProps) {
 	const { t, i18n } = useTranslation();
 
 	const currentLanguage = i18n.language;
@@ -25,6 +26,13 @@ export default function Menu({ onNewGame, onHelp }: MenuProps) {
 					onClick={onNewGame}
 				>
 					<span className={styles.menuContent}>{t('menu_new_game')}</span>
+				</li>
+
+				<li
+					className={styles.menuItem}
+					onClick={onRestartGame}
+				>
+					<span className={styles.menuContent}>{t('menu_restart')}</span>
 				</li>
 
 				<li

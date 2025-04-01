@@ -1,6 +1,8 @@
 {
-  "restart_confirm": "Iniciar um novo jogo?",
+  "new_game_confirm": "Iniciar um novo jogo?",
+  "restart_confirm": "Reiniciar este jogo?",
   "menu_new_game": "Novo jogo",
+  "menu_restart": "Reiniciar",
   "menu_help": "Ajuda",
   "help_title": "Como Jogar",
   "help_text_1": "O objetivo do jogo é marcar os números de forma que a soma corresponda aos números indicados nas colunas e linhas.",

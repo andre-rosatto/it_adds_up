@@ -1,6 +1,8 @@
 {
-  "restart_confirm": "Start a new game?",
+  "new_game_confirm": "Start a new game?",
+  "restart_confirm": "Restart this game?",
   "menu_new_game": "New Game",
+  "menu_restart": "Restart",
   "menu_help": "Help",
   "help_title": "How to Play",
   "help_text_1": "The goal is to mark the numbers so that their sum adds up to the numbers shown in the columns and rows.",
