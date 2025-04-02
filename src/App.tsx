@@ -13,7 +13,7 @@ const BOARD_SIZE = 6;
 export default function App() {
 	const { values, cols, rows, resetGame } = useGame(BOARD_SIZE);
 	const [marks, setMarks] = useState<number[]>(new Array(BOARD_SIZE * BOARD_SIZE).fill(0));
-	const [win, setWin] = useState(true);
+	const [win, setWin] = useState(false);
 	const [showHelp, setShowHelp] = useState(false);
 	const { t } = useTranslation();
 
